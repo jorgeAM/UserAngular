@@ -1,0 +1,17 @@
+<div *ngIf="!users">
+	<h1>Cargando lista de usuarios ...</h1>	
+</div>
+<div *ngIf="users">
+	<h3>{{titulo}}</h3>
+	<ul>
+		<li *ngFor="let user of users">
+			{{user.id}}
+			-
+			{{user.name}}
+			-
+			{{ user.email }}
+			-
+			{{ user.created_at }}
+		</li>
+	</ul>
+</div>
