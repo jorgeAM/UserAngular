@@ -13,7 +13,7 @@ import { User } from '../models/user';
   ]
 })
 export class UsersListComponent implements OnInit{
-  public titulo = 'Lista de Usuarios!!';
+  public titulo = 'Detalle de Usuario';
   public users: User[];
   
   //constructor

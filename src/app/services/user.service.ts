@@ -24,6 +24,14 @@ export class UserService{
 			.catch(this.handleError);
 	}
 
+	//método para mostrar un determinado usuario
+	getUsuario(id: number): Promise<User>{
+		return this.http.get(this.url+'/'+id)
+			.toPromise()
+			.then(res => res.json().usuario as User)
+			.catch(this.handleError);
+	}
+
 	//metodo para crear usuario
 	addUsuario(user: User): Promise<User>{
 		return this.http

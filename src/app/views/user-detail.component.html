@@ -1,0 +1,10 @@
+<div class="col-lg-4" *ngIf="!user">
+	<h1>Cargando Usuario</h1>
+</div>
+<div class="col-lg-4" *ngIf="user">
+	<h3>{{user.name}}</h3>
+	<p>
+		<strong>{{user.email}}</strong>
+	</p>
+</div>
+

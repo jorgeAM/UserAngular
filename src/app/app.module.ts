@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home.component';
 import { UsersListComponent }   from './components/users-list.component';
 import { NewUserComponent }   from './components/new-user.component';
+import { UsersDetailComponent }   from './components/user-detail.component';
 import { ErrorComponent } from './components/error.component';
 //servicio
 import { UserService } from './services/user.service'
@@ -19,6 +20,7 @@ import { AppRoutingModule } from './app.routing';
     HomeComponent,
     UsersListComponent,
     NewUserComponent,
+    UsersDetailComponent,
     ErrorComponent
   ],
   imports: [

@@ -3,15 +3,14 @@
 </div>
 <div *ngIf="users">
 	<h3>{{titulo}}</h3>
-	<ul>
-		<li *ngFor="let user of users">
-			{{user.id}}
-			-
-			{{user.name}}
-			-
-			{{ user.email }}
-			-
-			{{ user.created_at }}
-		</li>
-	</ul>
+	<div class="row">
+		<div class="col-lg-4" *ngFor="let user of users">
+			<p>{{user.name}}</p>
+			<p>
+				<a class="btn btn-sm btn-info" routerLink="/usuario/{{user.id}}">Home</a>
+				<a href="#" class="btn btn-sm btn-warning">Editar</a>
+				<a href="#" class="btn btn-sm btn-danger">Eliminar</a>
+			</p>
+		</div>
+	</div>
 </div>
