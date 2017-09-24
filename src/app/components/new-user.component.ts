@@ -15,7 +15,7 @@ import { User } from '../models/user';
 })
 export class NewUserComponent {
   public texto = 'Crea un nuevo usuario!';
-  public user = new User('', '', '');
+  public user = new User(0, '', '', '');
   
   //constructor
   constructor(

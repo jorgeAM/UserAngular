@@ -5,6 +5,7 @@ import { HomeComponent }   from './components/home.component';
 import { UsersListComponent }   from './components/users-list.component';
 import { NewUserComponent }   from './components/new-user.component';
 import { UsersDetailComponent }   from './components/user-detail.component';
+import { UserEditComponent }   from './components/user-edit.component';
 import { ErrorComponent }   from './components/error.component';
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'usuarios',  component: UsersListComponent },
   { path: 'usuario/new',  component: NewUserComponent },
   { path: 'usuario/:id', component: UsersDetailComponent},
+  { path: 'editarUsuario/:id', component: UserEditComponent},
   { path: '**', component: ErrorComponent },
 ];
 
