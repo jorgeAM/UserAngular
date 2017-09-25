@@ -41,6 +41,7 @@ export class UserService{
 			.catch(this.handleError);
 	}
 
+	//método para actualizar usuario
 	updateUsuario(id, user: User): Promise<User>{
 		return this.http
 			.put(this.url+'/'+id, JSON.stringify(user), {headers: this.headers})
@@ -49,6 +50,15 @@ export class UserService{
 			.catch(this.handleError);
 	}
 
+	//método para eliminar usuario
+	deleteUsuario(id: number): Promise<void>{
+		return this.http.delete(this.url+'/'+id, {headers: this.headers})
+			.toPromise()		
+			.then(() => null)
+			.catch(this.handleError);
+	}
+
+	//metodo para manejo de errores
 	private handleError(error: any): Promise<any> {
   		console.error('An error occurred', error); // for demo purposes only
   		return Promise.reject(error.message || error);

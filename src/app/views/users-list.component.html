@@ -9,7 +9,7 @@
 			<p>
 				<a class="btn btn-sm btn-info" routerLink="/usuario/{{user.id}}">Ver</a>
 				<a class="btn btn-sm btn-warning" routerLink="/editarUsuario/{{user.id}}">Editar</a>
-				<a href="#" class="btn btn-sm btn-danger">Eliminar</a>
+				<button (click)	="deleteUsuario(user.id)" class="btn-sm btn-danger">Eliminar</button>
 			</p>
 		</div>
 	</div>

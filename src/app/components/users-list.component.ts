@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 //servicio
 import { UserService } from '../services/user.service'
 //modelo
@@ -29,6 +29,15 @@ export class UsersListComponent implements OnInit{
 
   ngOnInit(): void{
   	this.getUsuarios();
+  }
+
+  deleteUsuario(id){
+    let confirmation = confirm('Estas seguro?')
+    if(confirmation){
+      this.userService
+        .deleteUsuario(id)
+        .then(() => this.getUsuarios());
+    }   
   }
 
 }
